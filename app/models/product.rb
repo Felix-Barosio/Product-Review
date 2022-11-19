@@ -12,4 +12,10 @@ class Product < ActiveRecord::Base
         )
     end
 
+    def print_all_reviews
+        self.reviews.each do |r|
+            r.print_review
+        end
+    end
+
 end
